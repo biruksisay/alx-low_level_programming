@@ -1,17 +1,17 @@
 #include "main.h"
+
 /**
- * main - prints the string "Main" from a character array.
- * Return: 0 on success.
+ * print_alphabet - a function that prints the alphabet, in lowercase
+ *
+ * Return: Always 0 (Succes)
  */
-int main(void)  
+void print_alphabet(void)
 {
-  char c[] = "Main";
-  int i;
-  
-  for (i = 0; i < 9; i++)
-    }
-      _putchar(c[i]); 
-    }
-  _putchar('\n');
-  return (0);
+	int n;
+
+	for (n = 'a'; n <= 'z'; n++)
+	{
+		_putchar(n);
+	}
+	_putchar('\n');
 }

@@ -1,25 +1,18 @@
 #include "main.h"
 /**
- * _strncpy - copie a string
- * @dest:char
- *  @src:char
- * @n:int
- * Return:char
+ * _strlen_recursion - length of string
+ * @s:string
+ * Return:int
  */
-char *_strncpy(char *dest, char *src, int n)
+int _strlen_recursion(char *s)
 {
-int i;
+	int i = 0;
 
-i = 0;
-	while (i < n && *(src + i))
+	if (*s)
 	{
-	*(dest + i) = *(src + i);
-	i++;
+		i++;
+		i += _strlen_recursion(s + 1);
+
 	}
-	while (i < n)
-	{
-	*(dest + i) = '\0';
-	i++;
-	}
-	return (dest);
+	return (i);
 }
